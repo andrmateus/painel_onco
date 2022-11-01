@@ -3,6 +3,8 @@ services:
   python:
     build: .
     ports:
-    - 80:80
-    expose:
-    - 80
+    - 80:5000
+    volumes:
+      - painel_onco:/usr/src/app/file
+volumes:
+  painel_onco:
